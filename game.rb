@@ -30,3 +30,19 @@ class Game
         puts @quips[rand(@quips.length())]
         process.exit(1)
     end
+
+    def central_corridor 
+        puts "Your ship has just landed on a deep space mining colony"
+        puts "You were sent there to investigate the facility as mineral production had ceased"
+        puts "Your mission is to investigate and return the findings to mothership"
+        puts "\n"
+        puts "after suiting up, you leave your ship and head to the nearest door"
+        puts "the quiet is the first thing you notice. flickering lights and dark corridors comprise your vision"
+        puts "The facility seems abandoned and coms with mothership have severed"
+        puts "you head to the lower levels of the installation in hope to find life or explanations"
+        puts "the levels of humiditiy are off the scale. You decide to head down to the lowest level"
+        puts "here you find the unbelievable... a mass of what seem to be dark green pods covered in an unidentifiable liquid"
+        puts "you begin to examine one of the alien life forms when the top of it folds open"
+
+        prompt()
+        action = gets.chomp()
