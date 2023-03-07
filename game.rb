@@ -55,7 +55,7 @@ class Game
             puts "it's time to get out of there with the sample"
             puts "as you turn to leave the lower level you see countless eggs unfolding"
             puts "You need to get back to to your ship"
-            return :upper_level
+            return :going_up
 
         elsif action == "run"
             puts "you panic"
@@ -81,4 +81,67 @@ class Game
         end
     end
 
-    def upper_level
+    def going_up
+        puts "panic sets in as a dozen facehuggers emerge from their eggs"
+        puts "you are running thrrough the damp misty lower level towards the elevator"
+        puts "frantically you push the button"
+        puts "but as the elevator lowers down you realise there is not enough time"
+        puts "the facehuggers can smell you fear and propelled towards you"
+        puts "there is a door with a key code that leads to stairwell"
+        puts "you are familiar with the locking system and know that if you guess the code wrong more than ten times" 
+        puts "then the door will stay locked indefinetly"
+        puts "the code is three digits"
+
+        code = "%s%s%s" % [rand(9)+1, rand(9)+1, rand(9)+1]
+
+        print "[keypad]> "
+
+        guess = gets.chomp()
+
+        guesses = 0
+
+        while guess != code and guesses < 10
+            puts "BZZZZZZDDDDDDD"
+            guesses += 1
+            print "[keypad]> "
+            guess = gets.chomp()
+        end
+
+        if guess == code 
+            puts "the door slides open and dash in faster than a gazelle"
+            puts "you smash the ground floor button again and again"
+            puts "the door is closing but not fast enough"
+            puts "just as the door closes a facehugger sneaks through"
+            puts "you take out your laser pistol and unload into its body"
+            puts "the facehugger slumps on the floor and as it bleeds you watch in fascination"
+            puts "the dull green blood begins to burn through the solid metal floor"
+            puts "a hole is created and the corpse falls back down to the depths"
+            puts "as you peer down you see the unthinkable"
+            puts "an alien the size of a human is climbing the shaft"
+            puts "its tail is whipping the surrounding metal and its long forehead has a sheen of death"
+            puts "the alien clamps onto the underside of the elevator just as you reach the ground floor"
+
+            return :outside
+        
+        if guess != code
+            puts "you hear the door clamp shut"
+            puts "you turn to see a dozen facehuggers scurrying towards you"
+            puts "running is your only option"
+            puts "you somehow dodge them and climb up to a platform"
+            puts "from here you take out your laser pistol and shoot all twelve"
+            puts "you breathe a sigh of relief and make your way to an open door at the farside of the lower level"
+            puts "you enter the room and collapse to your knees"
+            puts "amongst a web of slime you see the alien that has produced the eggs"
+            puts "the queen is five times larger than a human and has a tail that is longer than a shuttle pod"
+            puts "she stares at you through unseen eyes. her organic metalic crown reflecting the flickering lights"
+            puts "her mouth opens and a smaller mouth pertrudes"
+            puts "you notice something behind you and all goes black"
+            puts "the flickering lights slowly come back into view"
+            puts "you are stuck to the wall and covered in green web leaving only your face"
+            puts "you see the egg unfolding and the facehugger making it's way out of its cacoon"
+            puts "it saunters over to your legs and slowly edges up you body"
+            puts "the facehugger wraps its tail around your neck, clamps onto your face and feeds its tube down into your chest"
+
+            return :death
+        end
+    end
