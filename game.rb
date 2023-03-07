@@ -31,7 +31,7 @@ class Game
         process.exit(1)
     end
 
-    def lower_level 
+    def lower_level() 
         puts "Your ship has just landed on a deep space mining colony"
         puts "You were sent there to investigate the facility as mineral production had ceased"
         puts "Your mission is to investigate and return the findings to mothership"
@@ -81,7 +81,7 @@ class Game
         end
     end
 
-    def going_up
+    def going_up()
         puts "panic sets in as a dozen facehuggers emerge from their eggs"
         puts "you are running thrrough the damp misty lower level towards the elevator"
         puts "frantically you push the button"
@@ -145,3 +145,86 @@ class Game
             return :death
         end
     end
+
+    
+    def return_to_ship()
+        puts "the elevator door opens and every sense is obliterated by an electrical storm"
+        puts "the rain and the lightnening seem almost welcoming compared to the series of events that has just occured"
+        puts "you begin to run and then realise that you are on a different side of the compound"
+        puts "stay calm or die"
+        puts "you reach for your motion detector and turn it on"
+        puts "the sound of the sonar eminating frequencies is comforting"
+        puts "there are no lifeforms near you"
+        puts "think"
+        
+        prompt()
+        action = gets.chomp()
+
+        if action == "circle compound"
+            puts "you begin to circle the compound looking for your ship"
+            puts "the static fuzz of your radar lets you know that nothing around you is moving"
+            puts "the lightning and rain are unrelenting"
+            puts "a tunnel that leads through the compound"
+            puts "you can see your ship at the end"
+            puts "as you sprint through the dimly lit way you hear a beep"
+            puts "beep... beep... beep..."
+            puts "there's not time to think, only to run"
+            puts "blood covers the walls"
+            puts "beep. beep. beep."
+            puts "it's getting closer"
+            puts "you are nearly there"
+            puts "beepbeepbeepbeepbeepbeepbeepbeepbeep"
+            puts "where is it"
+            puts "you look up and as the lightning flashes you see that to metal roof of the tunnel is moving"
+            puts "there's so many"
+            puts "cold metal wraps around your throat"
+            puts "a facehugger crawls out of a vent and leaps straight onto your face"
+
+            return :death
+
+        if action == "re-enter compound and find a map"
+            puts "you can hear the alien trying to slash it's way through the elevator floor"
+            puts "it is trapped for now"
+            puts "you notice a door that goes back into the compound"
+            puts "if you can orientate yourself then you stand the best chance of making it back to the ship"
+            puts "you re-enter the compound"
+            puts "flickering lights, crackling radar, no sign of life"
+            puts "you walk down a long corridor and see three side rooms"
+            puts "which one do you choose"
+
+            good_room = rand(3)+1
+            print "[room# > ]"
+            guess = gets.chomp()
+
+            if guess.to_i != good_room
+                puts "you run into the room"
+                puts "What's that"
+                puts "before you have time to blink a facehugger has leapt onto your face"
+
+            if guess.to_i == good_room    
+                puts "a map of the compound is on the wall"
+                puts "breathe"
+                puts "you get your bearings back and work out the quickest way back to your ship"
+                puts "you calmly walk along the corridor to a t-junction and turn left"
+                puts "beep... beep... beep... beep"
+                puts "peering the other way you see the devil itself"
+                puts "the queen is rampaging down the corridor smashing everything in her path"
+                puts "beepbeepbeepbeepbeepbeep"
+                puts "run"
+                puts "you hear her power and desire slashing towards you"
+                puts "run"
+                puts "you make it to the door to exit the compound and slam the open pad"
+                puts "the door slides open"
+                puts "you jump out of the door and hit the close pad"
+                puts "turning around, you see the queen trapped in the door"
+                puts "her metalic body pays no resemblance to anything you have seen"
+                puts "her head is like a crown, her mouth opens and a second mouth darts out"
+                puts "it stops inches from your face and bites the air you breathe"
+                puts "you move back, take out your laser pistol and unload it into her head"
+
+                return :ship
+        end
+    end
+
+
+    
