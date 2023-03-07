@@ -223,8 +223,42 @@ class Game
                 puts "you move back, take out your laser pistol and unload it into her head"
 
                 return :ship
+            end
         end
     end
 
+    def ship()
+        puts "beep... beep... beep..."
+        puts "there are more aliens coming"
+        puts "you sprint back towards your ship"
+        puts "beep. beep. beep"
+        puts "lashing rain, lightning tearing the sky open"
+        puts "beepbeepbeepbeepbeep"
+        puts "they are right on top of you"
+        puts "you push the remote control and watch your ships door open smoothly"
+        puts "diving through you press the close button and hear the aliens slam against the closed door"
+        puts "you collect yourself in the cock pit for a few seconds before preparing for launch"
+        puts "it's not long before you are in orbit and make your way to the sleeping quaters"
+        puts "\n"
+        puts "you arrive back at mothership and after a 48 hours in an induced coma, you awaken to see your friends"
+        puts "what on earth happened down there? someone asks"
+        puts "I will tell you over a cup of tea, but first I want to see the sample"
+        puts "you make you way to lab 42 and enter with excitement"
+        puts "hi doc, tell me all abou....."
+        puts "your chest tightens"
+        puts "you can't breathe"
+        puts "you feel something moving inside you"
+        puts "you chest starts to move"
+        puts "you scream as your muscle fibres tear and you chest bones break"
+        puts "the doc passes out almost instantly"
+        puts "you lay on the floor staring at the alien that has just burst out of your chest"
+        puts "you die at the same time as another crewman discovers an octopus like creature under the bed inside your ship"
+        puts "the nearly born alien scurries into a ventilation shaft"
+        puts "total mothership crew is equal to 4237"
+        
+        process.exit(0)
+    end
+end
 
-    
+a_game = Game.new(:lower_level)
+a_game.play()
