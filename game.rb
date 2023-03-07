@@ -121,7 +121,7 @@ class Game
             puts "its tail is whipping the surrounding metal and its long forehead has a sheen of death"
             puts "the alien clamps onto the underside of the elevator just as you reach the ground floor"
 
-            return :outside
+            return :return_to_ship
         
         if guess != code
             puts "you hear the door clamp shut"
